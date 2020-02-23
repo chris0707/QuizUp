@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="albarillo.barebarz.quizup">
+
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:usesCleartextTraffic="true"
+        android:allowBackup="true"
+        android:icon="@mipmap/booklogoa"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/booklogoa"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".FingerPrintActivity" />
+        <activity android:name=".TitlesActivity" />
+        <activity android:name=".QuizActivity" />
+        <activity android:name=".ModActivity" />
+        <activity android:name=".ViewActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".PopAdd"
+            android:theme="@style/AppTheme.CustomPopAdd"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".PopEdit"
+            android:theme="@style/AppTheme.CustomPopAdd"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".CreateActivity"
+            android:windowSoftInputMode="adjustPan" />
+    </application>
+
+</manifest>
